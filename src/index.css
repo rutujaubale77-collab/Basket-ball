@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Anton", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased;
+  }
+}
+
+.basketball-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.markdown-body {
+  @apply space-y-4 leading-relaxed;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-display uppercase tracking-wider text-orange-500 mt-6 mb-2;
+}
+
+.markdown-body p {
+  @apply text-zinc-300;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply list-disc list-inside space-y-2 text-zinc-300 ml-4;
+}
+
+.markdown-body strong {
+  @apply text-white font-semibold;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-orange-600 pl-4 italic text-zinc-400 my-4;
+}
+
